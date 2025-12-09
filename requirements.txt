@@ -1,0 +1,11 @@
+# Core dependencies
+# No external dependencies needed for basic socket chat
+
+# Development dependencies
+pytest==7.4.3
+pytest-cov==4.1.0
+pytest-timeout==2.2.0
+
+# Code quality
+flake8==6.1.0
+black==23.12.1
