@@ -10,8 +10,9 @@ import threading
 from src.protocol import HEADER_LENGTH, encode_message, decode_message, decode_header
 
 # Server configuration
-HOST = '127.0.0.1'
-PORT = 1234
+import os
+HOST = os.getenv('CHAT_SERVER_HOST', '127.0.0.1')
+PORT = int(os.getenv('CHAT_SERVER_PORT', '1234'))
 
 
 def receive_messages(client_socket):
@@ -121,3 +122,4 @@ def run_client():
 
 if __name__ == '__main__':
     run_client()
+    
