@@ -70,6 +70,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: false
+        load: true
         tags: chat-server:test
         cache-from: type=gha
         cache-to: type=gha,mode=max
@@ -80,6 +81,7 @@ jobs:
         context: .
         file: ./Dockerfile.client
         push: false
+        load: true
         tags: chat-client:test
         cache-from: type=gha
         cache-to: type=gha,mode=max
